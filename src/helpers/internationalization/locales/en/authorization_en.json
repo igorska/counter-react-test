@@ -1,0 +1,12 @@
+{
+  "en": {
+    "translation": {
+      "authorization_1": "Authorization",
+      "authorization_2": "Enter your e-mail",
+      "authorization_3": "Password",
+      "authorization_4": "Type password",
+      "authorization_5": "Log in",
+      "authorization_6": "Registration"
+    }
+  }
+}

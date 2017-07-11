@@ -1,0 +1,15 @@
+.logo {
+
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+  padding: 15px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+  &__image{
+    width: 100%;
+    height: auto;
+  }
+}

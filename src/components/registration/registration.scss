@@ -1,0 +1,69 @@
+/* - - - authorization styles */
+@import '../authorization/authorization.scss';
+
+.wrapRegister{
+  @extend .wrapAuth;
+}
+
+.registerTop{
+  @extend .authTop;
+}
+
+.registerFormContainer{
+  @extend .authFormContainer;
+}
+
+.registerForm{
+  @extend .authForm;
+
+  &__header{
+    @extend .authForm__header;
+  }
+
+  &__main{
+    @extend .authForm__main;
+  }
+
+  &__section{
+    @extend .authForm__section;
+  }
+
+  &__footer{
+    @extend .authForm__footer;
+  }
+
+  &__label{
+    @extend .authForm__label;
+  }
+
+  &__btn{
+    @extend .authForm__btn;
+
+    &:last-child{
+      @extend .authForm__btn:last-child;
+    }
+  }
+
+  .registerFormField{
+    @extend .authFormField;
+
+
+    &__icon{
+      @extend .authFormField__icon;
+    }
+
+    &__input{
+      @extend .authFormField__input;
+    }
+
+    &__tooltip{
+      @extend .authFormField__tooltip;
+
+      &--jsNewPosVisible{
+        @extend .authFormField__tooltip--jsNewPosVisible;
+      }
+    }
+
+  }
+
+}
