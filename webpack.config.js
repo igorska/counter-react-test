@@ -160,7 +160,12 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              data:'@import "common.scss";',
+              includePaths:[
+                resolve(__dirname, "src/components/stateCommonBlocks/RootComponent")
+              ]
+
             }
           }
         ]

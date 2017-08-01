@@ -6,7 +6,10 @@
       "authorization_3": "Пароль",
       "authorization_4": "Введите пароль",
       "authorization_5": "Войти",
-      "authorization_6": "Регистрация"
+      "authorization_6": "Регистрация",
+      "authorization_7": "Извините, сервер недоступен",
+      "authorization_8": "Данные авторизации не верны. Проверьте правильность их заполнения",
+      "authorization_9": "Неизвестная ошибка"
     }
   }
 }

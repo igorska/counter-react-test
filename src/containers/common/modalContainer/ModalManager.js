@@ -1,5 +1,5 @@
 // - - -  import various modals
-import ModalSpinner from 'Components/blocks/ModalViews/Modals/ModalSpinner/ModalSpinner.jsx';
+import ModalSpinner from 'Components/stateCommonBlocks/ModalViews/Modals/ModalSpinner/ModalSpinner.jsx';
 
 // - - - import translate function form I18next
 import {translate} from 'react-i18next';

@@ -1,15 +1,15 @@
 // - - - custom components
 import ChangeLang from 'Containers/common/changeLangContainer/ChangeLangContainer.js';
 
-import ModalContainer from 'Containers/ModalContainer/ModalContainer.js';
+import ModalContainer from 'Containers/common/modalContainer/ModalContainer.js';
 
 // - - - for react animation
 import {CSSTransitionGroup} from 'react-transition-group';
 
 // - - - for react routing
-import {Router, Route, IndexRoute, Link, hashHistory} from 'react-router'
+import {Link} from 'react-router'
 
-// - - - common styles
+// - - - common styles for all Application
 import './common.scss';
 
 //--------------------------------------------------------------
@@ -32,7 +32,7 @@ let RootComponent = function (props) {
 
         <Link to='/registration'>На регистрацию &nbsp;</Link>
         <Link to='/authorization'>На авторизацию &nbsp;</Link>
-        <Link to='/'>На APP &nbsp;</Link>
+        <Link to='/app'>На APP &nbsp;</Link>
 
         <ChangeLang/>
 

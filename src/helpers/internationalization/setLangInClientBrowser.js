@@ -1,3 +1,6 @@
+
+import isLocalStorageAvailable from 'Helpers/common/js/isLocalStorageAvaliable.js';
+
 //----------------------------------------------------------------
 
 let setLangInClientBrowser = function  (lang) {
@@ -31,7 +34,7 @@ let setLangInClientBrowser = function  (lang) {
   }
 
   // check LocalStorage Support
-  if (typeof(Storage) === "undefined") {
+  if (!isLocalStorageAvailable()) {
     console.log("Sorry! No Web Storage support...");
 
     // BE CAREFUL! This i18next is from I18next languageDetector

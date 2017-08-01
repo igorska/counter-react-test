@@ -5,13 +5,16 @@ import {connect} from 'react-redux';
 import changeLangReSelector from './changeLangReSelector';
 
 // - - - import view ChangeLang
-import ChangeLang from 'Components/blocks/ChangeLang/ChangeLang.jsx';
+import ChangeLang from 'Components/stateCommonBlocks/ChangeLang/ChangeLang.jsx';
 
 // - - - import actionCreator for changing language
-import ChangeLangActionCreator from 'ActionCreators/common/ChangeLangActionCreator.js';
+import ChangeLangActionCreator from 'ActionCreators/common/changeLang/changeLangActionCreator.js';
 
 // - - - internationalization needs to change language
 import {i18n} from 'Helpers/internationalization/i18n.js';
+
+// - - - delete
+import modalActionCreator from 'ActionCreators/common/modal/modalActionCreator.js';
 
 //------------------------------------------------------------------
 
@@ -33,9 +36,16 @@ const mapDispatchToProps = (dispatch) => {
         // function to set new lang in I18next
         i18n.changeLanguage(newLang);
 
+        // check, if new lang was initialized correctly
+        if(i18n.language !== newLang){
+          console.log("Sorry! Changing Langauge with i18n is unsuccessful" +
+              "The state isn't changed!");
+          return;
+        }
+
       } catch (err) {
 
-        console.log("Sorry! Changing Langauge with i18n is unsuccessful" +
+        console.log("Sorry! Changing Language with i18n is unsuccessful" +
             "The state isn't changed!");
         console.log(err);
         return;
@@ -43,6 +53,12 @@ const mapDispatchToProps = (dispatch) => {
       }
 
       dispatch(ChangeLangActionCreator(newLang));
+
+      // - - - check modal work / can be delete completely
+      /*setTimeout(()=>{dispatch(modalActionCreator('SPINNER_MODAL'))},2000);
+      setTimeout(()=>{dispatch(modalActionCreator('NO_MODAL'))},6000 );*/
+
+
     }
   }
 };

@@ -1,5 +1,5 @@
 /* - - - authorization styles */
-@import '../authorization/authorization.scss';
+@import '../auth/authorization.scss';
 
 .wrapRegister{
   @extend .wrapAuth;
@@ -58,12 +58,13 @@
 
     &__tooltip{
       @extend .authFormField__tooltip;
-
-      &--jsNewPosVisible{
-        @extend .authFormField__tooltip--jsNewPosVisible;
-      }
     }
 
   }
 
+}
+
+.FormInput:hover ~ .registerFormField__tooltip,
+.FormInput:focus ~ .registerFormField__tooltip {
+  opacity: 1;
 }

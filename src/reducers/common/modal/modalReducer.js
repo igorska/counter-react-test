@@ -1,4 +1,4 @@
-import commonConstants from 'Constants/commonConstants.js';
+import modalConstants from 'Constants/actions/common/modal/modalActions.js';
 //-------------------------------------------------------------
 
 /*
@@ -6,7 +6,7 @@ import commonConstants from 'Constants/commonConstants.js';
  this is action example
 
  {
- "type": commonConstants.MODAL.CHANGE_MODAL,  - тип action
+ "type": modalConstants.MODAL.CHANGE_MODAL,  - тип action
  "payload": {
  "newModal": typeOfModal, - тип нового модального окна
  "data": data - данные , передаваемые в модальное окно извне
@@ -17,22 +17,22 @@ import commonConstants from 'Constants/commonConstants.js';
 //-------------------------------------------------------------
 
 let initState = {
-  type: commonConstants.MODAL.NO_MODAL,
-  data: commonConstants.MODAL.NO_MODAL_DATA
+  type: modalConstants.NO_MODAL,
+  data: modalConstants.NO_MODAL_DATA
 };
 
 let modalReducer = function (state = initState, action) {
 
   switch (action.type) {
-    case "CHANGE_MODAL":
+    case modalConstants.CHANGE_MODAL:
 
       // if NO_MODAL was sent
-      if (action.payload.newModal === commonConstants.MODAL.NO_MODAL) {
+      if (action.payload.newModal === modalConstants.NO_MODAL) {
         return initState;
       }
 
       // if user didn't send data, create empty object in data
-      if(action.payload.data === undefined){
+      if(action.payload.data === undefined || action.payload.data === 'NO_DATA'){
         action.payload.data = {}
       }
 

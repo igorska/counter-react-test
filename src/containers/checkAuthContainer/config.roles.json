@@ -1,0 +1,6 @@
+{
+  "App": ["Admin", "dima", "GasAdmin"],
+  "Component2": ["user"],
+  "House":["admin", "user"],
+  "Registration":["user"]
+}

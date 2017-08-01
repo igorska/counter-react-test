@@ -1,11 +1,11 @@
 
-import commonConstants from 'Constants/commonConstants.js';
+import changeLangConstants from 'Constants/actions/common/changeLang/changeLangActions.js';
 
 //--------------------------------------------------------------
 
 let ChangeLangActionCreator = function  (newLang) {
   return {
-    "type": commonConstants.LANG.CHANGE_LANG,
+    "type": changeLangConstants.CHANGE_LANG,
     "payload":{
       "newLang": newLang
     }

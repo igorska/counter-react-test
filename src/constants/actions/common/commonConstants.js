@@ -1,3 +1,4 @@
+/*
 //-----------------------------------------------------------------------
 
 const commonConstants = {
@@ -17,3 +18,4 @@ const commonConstants = {
 
 export default commonConstants;
 
+*/

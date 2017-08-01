@@ -1,0 +1,214 @@
+
+* {
+   /*outline: 1px solid red;*/
+}
+
+.wrapAuth {
+  height: 100%;
+  width: 100%;
+}
+
+.authTop {
+  width: 100%;
+  background-color: #1a80b6;
+}
+
+.authFormContainer {
+  max-width: 420px;
+  position: relative;
+  margin: 5% auto 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.authForm {
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  &__header {
+    padding: 15px 13px;
+    margin: 0;
+    border-bottom: 1px solid #e3e3e3;
+    background: rgba(248, 248, 248, .9);
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__main {
+    padding: 25px 15px 5px;
+    border: none;
+    background: rgba(255, 255, 255, .9);
+  }
+
+  &__section {
+    margin-bottom: 15px;
+  }
+
+  &__footer {
+    text-align: right;
+    padding: 15px;
+    border-top: 1px solid #e3e3e3;
+    background: rgba(248, 248, 248, .9);
+  }
+
+  &__label {
+    display: block;
+    line-height: 19px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #a2a2a2;
+    text-align: left;
+    white-space: normal;
+    padding: 0 8px 6px;
+  }
+
+  &__btn {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .authFormField {
+
+    position: relative;
+    color: #666;
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    width: 100%;
+
+    &__icon {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      border-left: 1px solid rgb(189, 189, 189);
+      max-width: 22px;
+      width: 22px;
+      height: 22px;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      padding-left: 3px;
+      color: #a2a2a2;
+    }
+
+    &__input {
+      display: block;
+      width: 100%;
+      border: 1px solid rgb(189, 189, 189);
+      outline: none;
+      padding: 5px 37px 5px 10px;
+      outline: 0;
+      background: #fff;
+      font-size: 13px;
+      line-height: 32px;
+      height: 32px;
+      color: #404040;
+
+      &:hover ~ .authFormField__tooltip,
+      &:focus ~ .authFormField__tooltip {
+        opacity: 1;
+      }
+    }
+
+    &__tooltip {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s;
+      -moz-transition: opacity 0.3s;
+      -ms-transition: opacity 0.3s;
+      -o-transition: opacity 0.3s;
+      transition: opacity 0.3s;
+      display: block;
+      position: absolute;
+      /*z-index: 1070;*/
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-break: auto;
+      text-decoration: none;
+      text-shadow: none;
+      text-transform: none;
+      white-space: normal;
+      word-break: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      font-size: 12px;
+      top: -17px;
+      right: 0;
+      left: auto;
+    }
+
+  }
+
+}
+
+.authError{
+
+  &__wrap{
+    position: relative;
+    text-align: center;
+    background-color: #f2dede;
+    color: #666;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    max-height:0;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 30px;
+    -webkit-transition: max-height 0.3s;
+    -moz-transition: max-height 0.3s;
+    -ms-transition: max-height 0.3s;
+    -o-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+  }
+
+  &__inner{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: inline-block;
+  }
+
+  &__btnClose{
+
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: $font-main;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    vertical-align: middle;
+    background-color: transparent;
+    outline:none;
+    border:none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &:hover{
+      color: #d9534f;
+    }
+  }
+
+  &__visible{
+    max-height: 100px;
+  }
+
+}

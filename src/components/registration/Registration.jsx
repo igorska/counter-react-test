@@ -15,8 +15,8 @@ import {
 } from 'react-form';
 
 // - - - custom components
-import Logo from 'Components/common/logo/Logo.jsx';
-import ContactInfo from 'Components/common/contactInfo/ContactInfo.jsx';
+import Logo from 'Components/dummyBlocks/logo/Logo.jsx';
+import ContactInfo from 'Components/dummyBlocks/contactInfo/ContactInfo.jsx';
 
 // - - - routing
 import {Link} from 'react-router';
@@ -26,45 +26,7 @@ import {Link} from 'react-router';
 
 //--------------------------------------------------------------
 
-class Register extends React.Component {
-
-  componentDidMount() {
-    /*this.props.RegisterActions.loadAvailableRegions();*/
-
-    function toControlTooltip() {
-
-      // - - - inputs are used under tooltips
-      let onlyInputs = $('.FormInput');
-
-      // - - - function for optionsForTooltip to show tooltip and
-      // change it's position
-      function toPlaceTooltip(tooltipDomNode, triggeringDomNode) {
-        $(tooltipDomNode).addClass('registerFormField__tooltip--jsNewPosVisible fade');
-      }
-
-      onlyInputs.each((index, domElement) => {
-
-        // - - - take tooltip template for optionsForTooltip
-        let tooltipForInput = $(domElement).next('.registerFormField__tooltip');
-
-        // - - - tune our tooltips
-        let optionsForTooltip = {
-          title: ' ',
-          placement: toPlaceTooltip,
-          html: true,
-          trigger: 'focus hover',
-          template: tooltipForInput.get(0).outerHTML
-        };
-
-        // - - - initialize our tooltips
-        $(domElement).tooltip(optionsForTooltip);
-
-      });
-    }
-
-    toControlTooltip();
-
-  }
+class Registration extends React.Component {
 
   validateForm(values, state, props, instance) {
 
@@ -385,4 +347,4 @@ class Register extends React.Component {
 
 //--------------------------------------------------------------
 
-export default Register
+export default Registration

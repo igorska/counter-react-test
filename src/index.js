@@ -18,13 +18,12 @@ import 'Assets/images/apple-favicon.png';
 // - - - FontAwesome
 import '../node_modules/font-awesome/scss/font-awesome.scss';
 
-// - - - common styles for all Application
-import 'components/blocks/RootComponent/common.scss';
-
 // - - - internationalization
 import {I18nextProvider} from 'react-i18next';
 import {i18n, pureLang} from 'Helpers/internationalization/i18n.js';
 
+// - - -  react-router-redux
+import { syncHistoryWithStore } from 'react-router-redux';
 //--------------------------------------------------------------
 
 const initialState = {
@@ -33,15 +32,17 @@ const initialState = {
 // - - - initial state
 
 const store = configureStore(initialState);
-
 // - - - making remain redux store
+
+const history = syncHistoryWithStore(browserHistory, store);
+// - - -  Create an enhanced history that syncs navigation events with the store
 
 const render = () => {
   ReactDOM.render(
       <Provider store={store}>
         <I18nextProvider i18n={ i18n }>
           <AppContainer>
-            <Router history={browserHistory} routes={routes} />
+            <Router history={history} routes={routes} />
           </AppContainer>
         </I18nextProvider>
       </Provider>,

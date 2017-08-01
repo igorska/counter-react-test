@@ -6,7 +6,10 @@
       "authorization_3": "Password",
       "authorization_4": "Type password",
       "authorization_5": "Log in",
-      "authorization_6": "Registration"
+      "authorization_6": "Registration",
+      "authorization_7": "Sorry, the server is unavailable",
+      "authorization_8": "The authorization data is not correct. Please, Check the correctness of their filling",
+      "authorization_9": "Unknown error"
     }
   }
 }

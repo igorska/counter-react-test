@@ -1,10 +1,10 @@
-import commonConstants from 'Constants/commonConstants.js';
+import modalConstants from 'Constants/actions/common/modal/modalActions.js';
 
 //--------------------------------------------------------------
 
 let modalActionCreator = function (typeOfModal, data = "NO_DATA") {
   return {
-    "type": commonConstants.MODAL.CHANGE_MODAL,
+    "type": modalConstants.CHANGE_MODAL,
     "payload": {
       "newModal": typeOfModal,
       "data": data
